@@ -8,5 +8,6 @@ setup(
     author_email="manuel.dornacher@gmail.com",
     description="My personal solutions for the advent of code challenges",
     install_requires=["advent-of-code-data"],
-    tests_require=["pytest", "black"],
+    extras_requires=["black"],
+    tests_require=["pytest"],
 )
