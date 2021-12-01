@@ -12,11 +12,11 @@ def main():
 
 
 def solve_a(puzzle_input):
-    return None
+    return ""
 
 
 def solve_b(puzzle_input):
-    return None
+    return ""
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ setup(
     author="mdornacher",
     author_email="manuel.dornacher@gmail.com",
     description="My personal solutions for the advent of code challenges",
-    install_requires=["advent-of-code-data"],
+    install_requires=["advent-of-code-data", "numpy"],
     extras_requires=["black"],
     tests_require=["pytest"],
 )
