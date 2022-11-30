@@ -1,7 +1,7 @@
-from aocs.day4 import solve_a, solve_b, main, is_bingo, play_bingo
-import pytest
 import numpy as np
+import pytest
 
+from aocs.aoc_2021.day04 import is_bingo, main, play_bingo, solve_a, solve_b
 
 TEST_INPUT = (
     ""

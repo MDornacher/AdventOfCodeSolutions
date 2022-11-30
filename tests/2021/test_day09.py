@@ -1,7 +1,8 @@
 import numpy as np
 import pytest
 
-from aocs.day9 import solve_a, solve_b, main, find_minima_mask, find_most_common_basins, parse_input
+from aocs.aoc_2021.day09 import (find_minima_mask, find_most_common_basins,
+                                 main, parse_input, solve_a, solve_b)
 
 TEST_INPUT = "2199943210\n"\
              "3987894921\n"\

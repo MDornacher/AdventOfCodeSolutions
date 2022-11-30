@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from aocs.day7 import solve_a, solve_b, main, create_fuel_template
+from aocs.aoc_2021.day07 import create_fuel_template, main, solve_a, solve_b
 
 TEST_INPUT = "16,1,2,0,4,2,7,1,2,14"
 

@@ -1,5 +1,4 @@
-from aocs.day1 import solve_a, solve_b, main
-
+from aocs.aoc_2021.day01 import main, solve_a, solve_b
 
 TEST_INPUT = "199\n200\n208\n210\n200\n207\n240\n269\n260\n263\n"
 

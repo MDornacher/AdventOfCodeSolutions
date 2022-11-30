@@ -1,5 +1,5 @@
-from aocs.day6 import solve_a, solve_b, main, initialize_population, update_population
-
+from aocs.aoc_2021.day06 import (initialize_population, main, solve_a, solve_b,
+                                 update_population)
 
 TEST_INPUT = [3, 4, 3, 1, 2]
 

@@ -1,5 +1,4 @@
-from aocs.day8 import solve_a, solve_b, main
-
+from aocs.aoc_2021.day08 import main, solve_a, solve_b
 
 TEST_INPUT = "be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe\n"\
              "edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc\n"\

@@ -1,5 +1,4 @@
-from aocs.day11 import solve_a, solve_b, main
-
+from aocs.aoc_2021.day11 import main, solve_a, solve_b
 
 TEST_INPUT = "5483143223\n"\
              "2745854711\n"\

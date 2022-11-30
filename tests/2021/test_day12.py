@@ -1,6 +1,6 @@
-from aocs.day12 import solve_a, solve_b, main
 import pytest
 
+from aocs.aoc_2021.day12 import main, solve_a, solve_b
 
 TEST_INPUT_SHORT = "start-A\n" "start-b\n" "A-c\n" "A-b\n" "b-d\n" "A-end\n" "b-end"
 

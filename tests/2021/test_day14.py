@@ -1,5 +1,4 @@
-from aocs.day14 import solve_a, solve_b, main
-
+from aocs.aoc_2021.day14 import main, solve_a, solve_b
 
 TEST_INPUT = "NNCB\n\n"\
              "CH -> B\n"\

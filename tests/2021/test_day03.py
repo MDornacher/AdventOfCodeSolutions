@@ -1,13 +1,7 @@
-from aocs.day3 import (
-    solve_a,
-    solve_b,
-    main,
-    calculate_oxygen_rating,
-    parse_report,
-    calculate_carbon_rating,
-    calculate_gamma_rate,
-    calculate_epsilon_rate,
-)
+from aocs.aoc_2021.day03 import (calculate_carbon_rating,
+                                 calculate_epsilon_rate, calculate_gamma_rate,
+                                 calculate_oxygen_rating, main, parse_report,
+                                 solve_a, solve_b)
 
 TEST_INPUT = (
     "00100\n11110\n10110\n10111\n10101\n01111\n00111\n11100\n10000\n11001\n00010\n01010"

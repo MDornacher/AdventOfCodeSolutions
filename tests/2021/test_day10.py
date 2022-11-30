@@ -1,14 +1,7 @@
 import pytest
 
-from aocs.day10 import (
-    solve_a,
-    solve_b,
-    main,
-    check_syntax,
-    close_broken_code,
-    calculate_autocomplete_score,
-)
-
+from aocs.aoc_2021.day10 import (calculate_autocomplete_score, check_syntax,
+                                 close_broken_code, main, solve_a, solve_b)
 
 TEST_INPUT = (
     "[({(<(())[]>[[{[]{<()<>>\n"

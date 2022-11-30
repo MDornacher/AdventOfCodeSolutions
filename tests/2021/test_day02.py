@@ -1,5 +1,4 @@
-from aocs.day2 import solve_a, solve_b, main
-
+from aocs.aoc_2021.day02 import main, solve_a, solve_b
 
 TEST_INPUT = "forward 5\ndown 5\nforward 8\nup 3\ndown 8\nforward 2"
 

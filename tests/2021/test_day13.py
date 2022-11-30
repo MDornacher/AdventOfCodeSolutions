@@ -1,6 +1,6 @@
 import numpy as np
 
-from aocs.day13 import solve_a, solve_b, main
+from aocs.aoc_2021.day13 import main, solve_a, solve_b
 
 TEST_INPUT = (
     "6,10\n"

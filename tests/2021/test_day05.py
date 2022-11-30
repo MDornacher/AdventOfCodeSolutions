@@ -1,7 +1,7 @@
 import numpy as np
 
-from aocs.day5 import solve_a, solve_b, main, mark_vent, parse_vents, create_field
-
+from aocs.aoc_2021.day05 import (create_field, main, mark_vent, parse_vents,
+                                 solve_a, solve_b)
 
 TEST_INPUT = "0,9 -> 5,9\n8,0 -> 0,8\n" \
              "9,4 -> 3,4\n2,2 -> 2,1\n" \
