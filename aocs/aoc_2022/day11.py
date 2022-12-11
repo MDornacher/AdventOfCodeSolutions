@@ -1,6 +1,7 @@
 from aocd.models import Puzzle
 import re
 from tqdm import tqdm
+import math
 
 
 DAY = 11
@@ -28,6 +29,8 @@ class Monkey:
         self.parse_monkey_info(monkey_info)
         self.inspections = 0
         self.worrisome = worrisome
+        # initiate group lcm which is filled in later
+        self.group_lcm = None
 
     # nicely formated repr of Monkey
     def __repr__(self):
@@ -92,20 +95,25 @@ class Monkey:
         # throw to if_true or if_false
         # repeat until all items are distributed
         # set self.inventory to empty list
-        for _ in range(len(self.inventory)):
-            item = self.inventory.pop()
+        for item in self.inventory:
             new_value = eval(self.operation.format(old=item))
             # add one to inspections
             self.inspections += 1
+
             # divide new value by three and round down to nearest integer
             # if we are worried about the monkeys
+            # else keep numbers low by modulating by lcm of group
             if self.worrisome:
                 new_value = new_value // 3
+            else:
+                new_value = new_value % self.group_lcm
+
             if new_value % self.test == 0:
                 throw_to = self.if_true
             else:
                 throw_to = self.if_false
             yield throw_to, new_value
+        self.inventory = []
 
 
 class MonkeyGroup:
@@ -119,7 +127,15 @@ class MonkeyGroup:
         self.worrisome = worrisome
         self.monkeys = {}
         self.parse_monkey_infos(monkey_infos)
+        self.find_lcm_of_group()
         self.rounds_played = 0
+
+    def find_lcm_of_group(self):
+        # find lcm of all monkeys test values
+        self.lcm = math.lcm(*[monkey.test for monkey in self.monkeys.values()])
+        # propagate lcm to all monkeys
+        for monkey in self.monkeys.values():
+            monkey.group_lcm = self.lcm
 
     # nicely formated repr of MonkeyGroup
     def __repr__(self):
@@ -219,9 +235,8 @@ def solve_a(puzzle_input):
     be worried
     """
     monkey_group = MonkeyGroup(puzzle_input, worrisome=True)
-    print(monkey_group)
     monkey_group.play(20)
-    print(monkey_group)
+    print(monkey_group.monkey_business)
     return monkey_group.monkey_business
 
 
@@ -232,6 +247,7 @@ def solve_b(puzzle_input):
     """
     monkey_group = MonkeyGroup(puzzle_input, worrisome=False)
     monkey_group.play(10000)
+    print(monkey_group.monkey_business)
     return monkey_group.monkey_business
 
 
